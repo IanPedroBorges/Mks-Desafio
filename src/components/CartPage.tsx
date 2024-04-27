@@ -34,7 +34,7 @@ export default function CartPage({ products, addProduct, showCartButton, removeP
         </HeaderCartPage>
         {products &&
           products.map((product) => (
-            <CartProducts key={product.id}>
+            <CartProducts data-testid='Cart-Products' key={product.id}>
               <img
                 src={product.photo}
                 alt={product.name}

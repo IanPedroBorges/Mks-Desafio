@@ -37,9 +37,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">50% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>1/1</span>
+                <span class='fraction'>1/2</span>
             </div>
         
             
@@ -101,34 +101,34 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { CardButton, CardDescription, CardGroupTitlePrice, CardImage, CardPrice, CardProduct, CardTitle, MainProductList } from "./styled/ProductsStyle";
 import shoppingBag from '../images/shopping-bag.svg';
 import { PropsProductType } from "../types/PropsTypes";
@@ -141,21 +141,21 @@ export default function Products({products, addProduct}: PropsProductType) {
     &lt;&gt;
         &lt;MainProductList&gt;
         {products &amp;&amp; products.map((product) =&gt; (
-            &lt;CardProduct key={product.id}&gt;
-            &lt;CardImage src={product.photo}/&gt;
-            &lt;CardGroupTitlePrice&gt;
-            &lt;CardTitle&gt;
-            {product.name}
-            &lt;/CardTitle&gt;
-            &lt;CardPrice&gt;{product.price}&lt;/CardPrice&gt;
-            &lt;/CardGroupTitlePrice&gt;
-            &lt;CardDescription&gt;
-            Redesigned from scratch and completely revised.
-            &lt;/CardDescription&gt;
-            &lt;CardButton onClick={ () =&gt; addProduct(product) }&gt;
-                &lt;img src={shoppingBag} alt="" /&gt;
+            &lt;CardProduct data-testid='product' key={product.id}&gt;
+              &lt;CardImage src={product.photo}/&gt;
+              &lt;CardGroupTitlePrice&gt;
+                &lt;CardTitle&gt;
+                {product.name}
+                &lt;/CardTitle&gt;
+                &lt;CardPrice&gt;{product.price}&lt;/CardPrice&gt;
+               &lt;/CardGroupTitlePrice&gt;
+              &lt;CardDescription&gt;
+                Redesigned from scratch and completely revised.
+              &lt;/CardDescription&gt;
+              &lt;CardButton onClick={ <span class="fstat-no" title="function not covered" >() =&gt; addProduct(product) }&gt;</span>
+                &lt;img src={shoppingBag} data-testid='button-buy' /&gt;
                 COMPRAR
-            &lt;/CardButton&gt;
+              &lt;/CardButton&gt;
             &lt;/CardProduct&gt;
         ))}
         &lt;/MainProductList&gt;
@@ -169,7 +169,7 @@ export default function Products({products, addProduct}: PropsProductType) {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2024-04-27T17:42:30.029Z
+                at 2024-04-27T17:58:26.556Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

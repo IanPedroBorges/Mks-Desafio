@@ -10,21 +10,21 @@ export default function Products({products, addProduct}: PropsProductType) {
     <>
         <MainProductList>
         {products && products.map((product) => (
-            <CardProduct key={product.id}>
-            <CardImage src={product.photo}/>
-            <CardGroupTitlePrice>
-            <CardTitle>
-            {product.name}
-            </CardTitle>
-            <CardPrice>{product.price}</CardPrice>
-            </CardGroupTitlePrice>
-            <CardDescription>
-            Redesigned from scratch and completely revised.
-            </CardDescription>
-            <CardButton onClick={ () => addProduct(product) }>
-                <img src={shoppingBag} alt="" />
+            <CardProduct data-testid='product' key={product.id}>
+              <CardImage src={product.photo}/>
+              <CardGroupTitlePrice>
+                <CardTitle>
+                {product.name}
+                </CardTitle>
+                <CardPrice>{product.price}</CardPrice>
+               </CardGroupTitlePrice>
+              <CardDescription>
+                Redesigned from scratch and completely revised.
+              </CardDescription>
+              <CardButton onClick={ () => addProduct(product) }>
+                <img src={shoppingBag} data-testid='button-buy' />
                 COMPRAR
-            </CardButton>
+              </CardButton>
             </CardProduct>
         ))}
         </MainProductList>
