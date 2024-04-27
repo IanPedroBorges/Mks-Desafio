@@ -9,4 +9,4 @@ Este projeto é parte de um desafio que estou enfrentando. Infelizmente, devido 
 2 - Navegue até o diretório do projeto.
 3 - Instale as dependências usando o comando npm install.
 4 - Inicie o servidor de desenvolvimento com o comando npm start.
-5 - O projeto estará disponível no navegador no endereço http://localhost:3000
+5 - O projeto estará disponível no navegador no endereço http://localhost:5173
