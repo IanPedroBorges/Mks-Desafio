@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { CardButton, CardDescription, CardGroupTitlePrice, CardImage, CardPrice, CardProduct, CardTitle, MainProductList } from "./styled/ProductsStyle";
 import { getProducts } from "../services/GetProducts";
 import { ProductType } from "../types/productType";
+import shoppingBag from '../images/shopping-bag.svg';
 
 export default function Products() {
     const [products, setProducts] = useState<ProductType[]>([]);
@@ -30,7 +31,10 @@ export default function Products() {
             <CardDescription>
             Redesigned from scratch and completely revised.
             </CardDescription>
-            <CardButton>Adicionar ao carrinho</CardButton>
+            <CardButton>
+                <img src={shoppingBag} alt="" />
+                COMPRAR
+            </CardButton>
             </CardProduct>
         ))}
         </MainProductList>
