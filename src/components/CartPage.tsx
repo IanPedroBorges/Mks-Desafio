@@ -11,7 +11,7 @@ import {
   MainCartPage,
 } from "./styled/CartPageStyled";
 
-export default function CartPage({ products, addProduct, showCartButton, removeProduct }: PropsCartPageType) {
+export default function CartPage({ products, addProduct, showCartButton, removeProduct, finalyBuy }: PropsCartPageType) {
   return (
     <>
       <MainCartPage>
@@ -55,7 +55,7 @@ export default function CartPage({ products, addProduct, showCartButton, removeP
           <h3>Total</h3>
           <p>{`R$ ${totalPrice(products)}`}</p>
         </FooterCartPage>
-        <CartButton>Finalizar Compra</CartButton>
+        <CartButton onClick={() => finalyBuy()}>Finalizar Compra</CartButton>
       </MainCartPage>
     </>
   );

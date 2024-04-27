@@ -51,13 +51,18 @@ function App() {
         }
     };
 
+    const finalyBuy = () => {
+        setMyProducts([]);
+        setShowCart(false);
+        alert("Compra finalizada com sucesso!");
+    };
    return (
     <>
       <Header quantityCart={quantityProducts(myProducts)} showCartButton={showCartProducts} showCart={showCart}/>
       <Products products={products} addProduct={addProduct}>
         
       </Products>
-      {showCart && <CartPage products={myProducts} addProduct={addProduct} showCartButton={showCartProducts} removeProduct={removeProduct}/>}
+      {showCart && <CartPage products={myProducts} addProduct={addProduct} showCartButton={showCartProducts} removeProduct={removeProduct} finalyBuy={finalyBuy}/>}
     </>
   );
 }

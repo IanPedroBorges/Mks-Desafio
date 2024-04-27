@@ -50,6 +50,9 @@ export const CartButton = styled.button`
     display: flex;
     justify-content: center;
     align-items: center;
+    font-weight: 700;
+    line-height: 15px;
+    font-size: 1rem;
     width: 100%;
     height: 4rem;
     background-color: #000000;

@@ -17,4 +17,5 @@ export type PropsCartPageType = {
     addProduct: (product: ProductType) => void;
     showCartButton: () => void;
     removeProduct: (product: ProductType) => void;
+    finalyBuy: () => void;
 };
