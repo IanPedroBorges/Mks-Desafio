@@ -5,8 +5,8 @@ Este projeto é parte de um desafio que estou enfrentando. Infelizmente, devido 
 
 # Como Usar
 
-1 - Clone este repositório.
-2 - Navegue até o diretório do projeto.
-3 - Instale as dependências usando o comando npm install.
-4 - Inicie o servidor de desenvolvimento com o comando npm start.
-5 - O projeto estará disponível no navegador no endereço http://localhost:5173
+- Clone este repositório.
+- - Navegue até o diretório do projeto.
+- Instale as dependências usando o comando npm install.
+- Inicie o servidor de desenvolvimento com o comando npm start.
+- O projeto estará disponível no navegador no endereço http://localhost:5173
