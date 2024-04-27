@@ -1,19 +1,9 @@
-import { useEffect, useState } from "react";
 import { CardButton, CardDescription, CardGroupTitlePrice, CardImage, CardPrice, CardProduct, CardTitle, MainProductList } from "./styled/ProductsStyle";
-import { getProducts } from "../services/GetProducts";
-import { ProductType } from "../types/productType";
 import shoppingBag from '../images/shopping-bag.svg';
+import { PropsProductType } from "../types/PropsTypes";
 
-export default function Products() {
-    const [products, setProducts] = useState<ProductType[]>([]);
-
-    useEffect(() => {
-        const allProducts = async () => {
-            const response = await getProducts();
-            setProducts(response);
-        };
-        allProducts();
-    }, []);
+export default function Products({products, addProduct}: PropsProductType) {
+    
 
 
   return (
@@ -31,7 +21,7 @@ export default function Products() {
             <CardDescription>
             Redesigned from scratch and completely revised.
             </CardDescription>
-            <CardButton>
+            <CardButton onClick={ () => addProduct(product) }>
                 <img src={shoppingBag} alt="" />
                 COMPRAR
             </CardButton>

@@ -6,8 +6,9 @@ import {
   } from "../components/styled/HeaderStyled";
   import Mks from "../images/MKS.svg";
   import cart from "../images/Vector.svg";
+import { PropsHeaderType } from "../types/PropsTypes";
 
-export default function Header() {
+export default function Header({quantityCart, showCartButton, showCart }: PropsHeaderType) {
   return (
     <>
     <HeaderStyled>
@@ -15,10 +16,10 @@ export default function Header() {
           <img src={Mks} alt="" />
           <TitleH2>Sistemas</TitleH2>
         </TitleGroup>
-        <CartStyled>
+        {!showCart && <CartStyled onClick={() => showCartButton()}>
           <img src={cart} alt="" />
-          <span>0</span>
-        </CartStyled>
+          <span>{quantityCart}</span>
+        </CartStyled>}
       </HeaderStyled>
     </>
   );

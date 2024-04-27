@@ -23,7 +23,7 @@ export const TitleH2 = styled.h2`
     font-weight: 200;
 `;
 
-export const CartStyled = styled.div`
+export const CartStyled = styled.button`
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -33,4 +33,6 @@ export const CartStyled = styled.div`
     background-color: #FFFFFF;
     margin-right: 1rem;
     color: black;
+    cursor: pointer;
+    border: none;
 `;
