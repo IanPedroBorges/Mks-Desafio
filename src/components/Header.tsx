@@ -13,11 +13,11 @@ export default function Header({quantityCart, showCartButton, showCart }: PropsH
     <>
     <HeaderStyled>
         <TitleGroup>
-          <img src={Mks} alt="" />
+          <img src={Mks} alt="Mks" data-testid='Mks'  />
           <TitleH2>Sistemas</TitleH2>
         </TitleGroup>
         {!showCart && <CartStyled onClick={() => showCartButton()}>
-          <img src={cart} alt="" />
+          <img src={cart} alt="Cart" data-testid="Cart" />
           <span>{quantityCart}</span>
         </CartStyled>}
       </HeaderStyled>
